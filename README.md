@@ -3,7 +3,7 @@ go-su는 go slice를 쉽게 사용하기 위한 utility 패키지입니다.
 # 시작하기
 아래와 같이 패키지를 설치 합니다.
 ```
-$ go get github.com/swkwon/go-su@latest
+    $ go get github.com/swkwon/go-su@latest
 ```
 ## 객체 생성
 su를 사용하기 위해서 먼저 New함수로 인스턴스를 생성합니다.
@@ -83,13 +83,13 @@ RemoveAll은 모두 삭제 합니다.
 ## 데이터 검색, 가져오기, 저장하기
 slice내에 있는 값을 찾고, 값을 가져오고, 다른 값으로 덮어씌울 수 있습니다.
 ```
-	mySlice := su.New([]int{1, 2, 3, 4})
+    mySlice := su.New([]int{1, 2, 3, 4})
 
     // index는 3 입니다.
-	index := mySlice.IndexOf(func(value int) bool {
-		return value == 4
-	})
-    
+    index := mySlice.IndexOf(func(value int) bool {
+        return value == 4
+    })
+
     // value는 4 입니다.
     value := mySlice.Get(3)
     
